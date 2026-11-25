@@ -3,243 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STRIKE PLANE 3D — Official APK Download</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { background: radial-gradient(circle at top, #181028 0%, #09090f 55%, #050508 100%); }
-    .glow-btn { box-shadow: 0 0 28px rgba(239, 68, 68, 0.45); }
-    .card-glass { background: rgba(17, 19, 30, 0.82); backdrop-filter: blur(10px); }
-  </style>
-</head>
-<body class="text-slate-100 min-h-screen font-sans antialiased selection:bg-red-500/40">
+  <title>STRIKE PLANE 3D — Official Android APK Download</title>
+  <meta name="description" content="Download the official STRIKE PLANE 3D Android APK (v1.0). Fast-paced 3D mobile arena fighting game featuring Beast, The Handsome, and Immortal / Death, 1v1 Ranked, 4v4 Squad, Custom Team-Swap rooms, and Offline Bot Mode." />
+  <meta name="keywords" content="STRIKE PLANE 3D, Strike Plane 3D APK, Strike.battleground.apk, Android 3D fighting game, anime arena fighter APK, offline bot fighting game" />
+  <link rel="canonical" href="https://natik3508-afk.github.io/strike-plane-3d-web/" />
 
-  <!-- Top Bar -->
-  <header class="sticky top-0 z-40 border-b border-white/10 bg-[#09090f]/85 backdrop-blur">
-    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-      <div class="flex items-center gap-2">
-        <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse"></span>
-        <span class="font-black tracking-wider text-sm sm:text-base">STRIKE PLANE <span class="text-red-500">3D</span></span>
-      </div>
-      <span id="navVersion" class="text-xs font-bold px-2.5 py-1 rounded-full bg-white/10 text-amber-300">Checking release...</span>
-    </div>
-  </header>
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="STRIKE PLANE 3D — Official Android APK" />
+  <meta property="og:description" content="Download STRIKE PLANE 3D for Android. Play 1v1 Ranked, 4v4 Squad, Custom Rooms, and Offline Bot Mode with Beast, The Handsome, and Immortal / Death." />
+  <meta property="og:url" content="https://natik3508-afk.github.io/strike-plane-3d-web/" />
 
-  <main class="max-w-4xl mx-auto px-4 pt-8 pb-16 space-y-10">
-
-    <!-- Hero Section -->
-    <section class="text-center space-y-5">
-      <div class="inline-flex flex-wrap items-center justify-center gap-2 text-xs font-semibold">
-        <span class="px-3 py-1 rounded-full bg-red-500/15 text-red-300 border border-red-500/30">Android 8.0+</span>
-        <span class="px-3 py-1 rounded-full bg-sky-500/15 text-sky-300 border border-sky-500/30">Online 1v1 &amp; 4v4</span>
-        <span class="px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-300 border border-emerald-500/30">Offline Bot Mode</span>
-      </div>
-
-      <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none">
-        STRIKE PLANE <span class="bg-gradient-to-r from-red-500 via-amber-400 to-sky-400 bg-clip-text text-transparent">3D</span>
-      </h1>
-      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-        Fast-paced 3D mobile arena fighting game with Awakening transformations, Domain finishers, Custom Team-Swap rooms, and full stadium audio.
-      </p>
-
-      <!-- Live Release Stats -->
-      <div class="grid grid-cols-3 gap-2.5 max-w-md mx-auto text-center">
-        <div class="card-glass border border-white/10 rounded-xl p-3">
-          <div id="statVersion" class="text-base font-black text-amber-400">--</div>
-          <div class="text-[11px] text-slate-400">Version</div>
-        </div>
-        <div class="card-glass border border-white/10 rounded-xl p-3">
-          <div id="statSize" class="text-base font-black text-sky-400">--</div>
-          <div class="text-[11px] text-slate-400">APK Size</div>
-        </div>
-        <div class="card-glass border border-white/10 rounded-xl p-3">
-          <div id="statDownloads" class="text-base font-black text-emerald-400">--</div>
-          <div class="text-[11px] text-slate-400">Downloads</div>
-        </div>
-      </div>
-
-      <!-- Download CTA -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-        <a id="downloadBtn" href="#install"
-           class="w-full sm:w-auto glow-btn px-8 py-4 rounded-2xl bg-gradient-to-r from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 font-black text-base tracking-wide transition active:scale-95">
-          ⬇ DOWNLOAD APK (FREE)
-        </a>
-        <button onclick="shareWhatsApp()"
-           class="w-full sm:w-auto px-6 py-4 rounded-2xl bg-emerald-600/20 hover:bg-emerald-600/30 border border-emerald-500/40 text-emerald-300 font-bold text-sm transition">
-          Invite Friends on WhatsApp
-        </button>
-      </div>
-
-      <p id="statusNote" class="text-xs text-slate-400">Fetching latest official APK from GitHub Releases...</p>
-
-      <!-- Quick Share Row -->
-      <div class="flex items-center justify-center gap-3 pt-1">
-        <button onclick="copySiteLink()" class="text-xs px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10">
-          Copy Website Link
-        </button>
-        <button onclick="toggleQR()" class="text-xs px-3.5 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10">
-          Show QR Code
-        </button>
-      </div>
-    </section>
-
-    <!-- Patch Notes (Auto-filled from Release) -->
-    <section id="notesBox" class="hidden card-glass border border-amber-500/30 rounded-2xl p-5 space-y-2">
-      <div class="flex items-center justify-between">
-        <h2 class="font-black text-sm uppercase tracking-wider text-amber-400">What's New</h2>
-        <span id="releaseDate" class="text-xs text-slate-400"></span>
-      </div>
-      <pre id="patchNotes" class="text-xs sm:text-sm text-slate-300 whitespace-pre-wrap font-sans leading-relaxed"></pre>
-    </section>
-
-    <!-- Fighters Showcase -->
-    <section class="space-y-4">
-      <h2 class="text-xl font-black tracking-wide text-center">PLAYABLE FIGHTERS</h2>
-      <div class="grid sm:grid-cols-3 gap-4">
-        <div class="card-glass border border-red-500/30 rounded-2xl p-5 space-y-2">
-          <div class="text-xs font-bold uppercase text-red-400">Heavy Destroyer • 125 HP</div>
-          <h3 class="text-xl font-black">BEAST</h3>
-          <p class="text-xs text-slate-300">Brutal crimson-and-purple powerhouse built for heavy impact combos and arena destruction.</p>
-          <div class="text-[11px] text-slate-400 pt-1">Ultimates: <span class="text-slate-200">Ult Hudku • Colossus Palm • Domain Opener</span></div>
-        </div>
-
-        <div class="card-glass border border-sky-500/30 rounded-2xl p-5 space-y-2">
-          <div class="text-xs font-bold uppercase text-sky-400">Counter Specialist • 120 HP</div>
-          <h3 class="text-xl font-black">THE HANDSOME</h3>
-          <p class="text-xs text-slate-300">Flashy electric-blue striker with crystal counters, ranged control, and explosive finishers.</p>
-          <div class="text-[11px] text-slate-400 pt-1">Ultimates: <span class="text-slate-200">Ult Mirror • Sky Hammer • Cupid's Domain</span></div>
-        </div>
-
-        <div class="card-glass border border-amber-400/35 rounded-2xl p-5 space-y-2">
-          <div class="text-xs font-bold uppercase text-amber-300">Awakens Into Death • 130 HP</div>
-          <h3 class="text-xl font-black">IMMORTAL / DEATH</h3>
-          <p class="text-xs text-slate-300">Starts in radiant ivory-gold sustain and transforms into Death with fear zones and gravity crushes.</p>
-          <div class="text-[11px] text-slate-400 pt-1">Moves: <span class="text-slate-200">Ground Smasher • Bench Crusher • Fear • Raging Demon • Physkick</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3-Step Install Guide -->
-    <section id="install" class="card-glass border border-white/10 rounded-2xl p-6 space-y-4">
-      <h2 class="text-lg font-black tracking-wide">HOW TO INSTALL ON ANDROID</h2>
-      <ol class="grid sm:grid-cols-3 gap-4 text-sm">
-        <li class="bg-white/5 rounded-xl p-4 space-y-1">
-          <div class="text-red-400 font-black">STEP 1</div>
-          <p class="text-xs text-slate-300">Tap <b>Download APK</b> above and wait for the file to finish downloading in Chrome.</p>
-        </li>
-        <li class="bg-white/5 rounded-xl p-4 space-y-1">
-          <div class="text-amber-400 font-black">STEP 2</div>
-          <p class="text-xs text-slate-300">Open the downloaded <b>.apk</b> file. If asked, tap <b>Settings → Allow from this source</b>.</p>
-        </li>
-        <li class="bg-white/5 rounded-xl p-4 space-y-1">
-          <div class="text-emerald-400 font-black">STEP 3</div>
-          <p class="text-xs text-slate-300">Tap <b>Install</b>, open <b>STRIKE PLANE 3D</b>, add your friends, and jump into 1v1, 4v4, or Custom Matches!</p>
-        </li>
-      </ol>
-    </section>
-
-  </main>
-
-  <!-- QR Modal -->
-  <div id="qrModal" class="hidden fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4" onclick="toggleQR()">
-    <div class="card-glass border border-white/15 rounded-2xl p-6 text-center space-y-3 max-w-xs w-full" onclick="event.stopPropagation()">
-      <h3 class="font-black text-base">Scan to Download</h3>
-      <img id="qrImg" alt="QR Code" class="mx-auto rounded-xl bg-white p-2 w-52 h-52" />
-      <p class="text-xs text-slate-400">Friends can scan this right off your phone screen.</p>
-      <button onclick="toggleQR()" class="w-full py-2 rounded-xl bg-white/10 hover:bg-white/15 text-xs font-bold">Close</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer class="border-t border-white/10 py-6 text-center text-xs text-slate-500 space-y-2">
-    <div>© 2026 STRIKE PLANE 3D • Official Player Portal</div>
-    <div>
-      <a href="https://github.com/natik3508-afk/strike-plane-3d/releases/new" target="_blank" rel="noopener"
-         class="text-slate-600 hover:text-slate-300 underline">
-        [DEV] Upload New APK Release ↗
-      </a>
-    </div>
-  </footer>
-
-  <script>
-    const REPOS = [
-      "natik3508-afk/strike-plane-3d",
-      "natik3508-afk/strike-plane-3d-web"
-    ];
-
-    async function loadLatestApk() {
-      const btn = document.getElementById("downloadBtn");
-      const status = document.getElementById("statusNote");
-      let foundApk = null;
-      let totalDownloads = 0;
-
-      for (const repo of REPOS) {
-        try {
-          const res = await fetch(`https://api.github.com/repos/${repo}/releases`);
-          if (!res.ok) continue;
-          const releases = await res.json();
-          if (!Array.isArray(releases) || releases.length === 0) continue;
-
-          for (const rel of releases) {
-            for (const asset of (rel.assets || [])) {
-              if (asset.name.toLowerCase().endsWith(".apk")) {
-                totalDownloads += asset.download_count || 0;
-                if (!foundApk) foundApk = { rel, asset };
-              }
-            }
-          }
-          if (foundApk) break;
-        } catch (e) {}
-      }
-
-      if (foundApk) {
-        const { rel, asset } = foundApk;
-        const sizeMB = (asset.size / (1024 * 1024)).toFixed(1) + " MB";
-        const version = rel.tag_name || "v1.0";
-
-        btn.href = asset.browser_download_url;
-        btn.innerHTML = `⬇ DOWNLOAD APK (${sizeMB})`;
-        document.getElementById("navVersion").textContent = version;
-        document.getElementById("statVersion").textContent = version;
-        document.getElementById("statSize").textContent = sizeMB;
-        document.getElementById("statDownloads").textContent = totalDownloads.toLocaleString();
-        status.textContent = `Official direct download: ${asset.name} • Verified via GitHub Releases`;
-
-        if (rel.body && rel.body.trim()) {
-          document.getElementById("notesBox").classList.remove("hidden");
-          document.getElementById("patchNotes").textContent = rel.body.trim();
-          document.getElementById("releaseDate").textContent = new Date(rel.published_at).toLocaleDateString();
-        }
-      } else {
-        document.getElementById("navVersion").textContent = "APK Pending";
-        document.getElementById("statVersion").textContent = "Soon";
-        document.getElementById("statSize").textContent = "--";
-        document.getElementById("statDownloads").textContent = "0";
-        status.textContent = "No APK uploaded yet — tap '[DEV] Upload New APK Release' in the footer to publish v1.0.";
-        btn.href = "https://github.com/natik3508-afk/strike-plane-3d/releases/new";
-        btn.innerHTML = "⬆ UPLOAD FIRST APK (DEV)";
-      }
+  <!-- Structured Data for Google Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": "STRIKE PLANE 3D",
+    "operatingSystem": "Android 8.0+",
+    "applicationCategory": "GameApplication",
+    "genre": "3D Arena Fighting",
+    "softwareVersion": "1.0",
+    "fileSize": "9.89MB",
+    "url": "https://natik3508-afk.github.io/strike-plane-3d-web/",
+    "downloadUrl": "https://github.com/natik3508-afk/strike-plane-3d-web/releases/latest/download/Strike.battleground.apk",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR"
     }
-
-    function shareWhatsApp() {
-      const text = `Download STRIKE PLANE 3D (3D Arena Fighting Game) and play 1v1, 4v4 & Custom Matches with me! ${window.location.href}`;
-      window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
-    }
-
-    function copySiteLink() {
-      navigator.clipboard.writeText(window.location.href).then(() => alert("Website link copied! Share it with your friends."));
-    }
-
-    function toggleQR() {
-      const modal = document.getElementById("qrModal");
-      const img = document.getElementById("qrImg");
-      if (modal.classList.contains("hidden")) {
-        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(window.location.href)}`;
-      }
-      modal.classList.toggle("hidden");
-    }
-
-    loadLatestApk();
+  }
   </script>
-</body>
-  </html>
-  
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: radial-gradient(circle at top, #171d33 0%, #0a0d16 65%);
+      color: #f3f6ff;
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      background: rgba(10, 13, 22, 0.85);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      z-index: 10;
+    }
+    .brand { font-weight: 800; letter-spacing: 0.6px; font-size: 1rem; display: flex; align-items: center; gap: 8px; }
+    .brand span { color: #ff5c35; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 8px #22c55e; }
+    .status-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.16);
+      color: #4ade80;
+      border: 1px solid rgba(74, 222, 128, 0.35);
+    }
+    .container { max-width: 680px; margin: 0 auto; padding: 28px 18px 48px; }
+    .hero { text-align: center; }
+    .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
+    .badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .badge.red { color: #fda4af; border-color: rgba(244, 63, 94, 0.35); background: rgba(244, 63, 94, 0.12); }
+    .badge.blue { color: #93c5fd; border-color: rgba(59, 130, 246, 0.35); background: rgba(59, 130, 246, 0.12); }
+    .badge.green { color: #6ee7b7; border-color: rgba(16, 185, 129, 0.35); background: rgba(16, 185, 129, 0.12); }
+    h1 { font-size: 2.25rem; font-weight: 900; letter-spacing: 0.5px; margin-bottom: 12px; }
+    h1 span {
+      background: linear-gradient(90deg, #ff6b35, #fbbf24, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle { color: #b7c2dc; font-size: 0.98rem; max-width: 540px; margin: 0 auto 22px; }
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+    .stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 14px 8px;
+    }
+    .stat-val { font-size: 1.15rem; font-weight: 800; color: #fbbf24; }
+    .stat-val.cyan { color: #38bdf8; }
+    .stat-val.emerald { color: #34d399; }
+    .stat-lbl { font-size: 0.76rem; color: #94a3b8; margin-top: 2px; }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 800;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, opacity 0.15s ease;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: linear-gradient(135deg, #ff512f, #f09819);
+      color: #ffffff;
+      box-shadow: 0 10px 25px rgba(255, 81, 47, 0.35);
+      margin-bottom: 12px;
+    }
+    .btn-whatsapp {
+      background: #0f3d33;
+      color: #6ee7b7;
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      margin-bottom: 12px;
+    }
+    .helper-note { font-size: 0.82rem; color: #94a3b8; margin-bottom: 14px; }
+    .secondary-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 34px; }
+    .btn-ghost {
+      background: rgba(255,255,255,0.05);
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    section { margin-top: 28px; }
+    h2 { font-size: 1.15rem; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase; color: #e2e8f0; margin-bottom: 12px; text-align: center; }
+    .card-list { display: grid; gap: 12px; }
+    .info-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 14px;
+      padding: 15px 16px;
+    }
+    .info-card h3 { font-size: 1rem; color: #fbbf24; margin-bottom: 4px; }
+    .info-card p, .info-card li { font-size: 0.9rem; color: #cbd5e1; }
+    .info
+    
